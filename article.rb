@@ -1,5 +1,5 @@
 class Article
-  attr_accessor :title, :url, :votes, :parent_url
+  attr_accessor :title, :url, :points, :parent_url
 
   @@all_articles = []
 
@@ -10,7 +10,7 @@ class Article
   def initialize(hash)
     @title = hash[:title]
     @url = hash[:url]
-    @votes = hash[:votes]
+    @points = hash[:points]
     @parent_url = hash[:parent_url]
     self.add_if_not_duplicate
   end

@@ -16,8 +16,8 @@ class Hacker_news_scraper
      title = x.parent.parent.previous.children[-1].children.children[0].text
      url = x.parent.parent.previous.children[-1].children[0].attributes["href"].value
      parent_url = x.parent.parent.previous.children[-1].children.children[1].text
-     votes = x.children.text[/\d+/].to_i
-     Article.new({:title => title, :url => url, :parent_url => parent_url, :votes => votes})
+     points = x.children.text[/\d+/].to_i
+     Article.new({:title => title, :url => url, :parent_url => parent_url, :points => points})
     end
   end
 
