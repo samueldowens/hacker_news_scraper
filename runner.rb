@@ -10,5 +10,6 @@ require_relative 'database.rb'
 3.times do Hacker_news_scraper.new
 end
 
+Database.insert(Article.all_articles)
 puts Article.all_articles
-binding.pry
+# binding.pry

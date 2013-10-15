@@ -8,7 +8,7 @@ class Article
   end
 
   def initialize(hash)
-    @name = hash[:name]
+    @title = hash[:title]
     @url = hash[:url]
     @votes = hash[:votes]
     @parent_url = hash[:parent_url]

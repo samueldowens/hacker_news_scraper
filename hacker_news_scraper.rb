@@ -1,12 +1,3 @@
-
-require 'nokogiri'
-require 'sqlite3'
-require 'restclient'
-require 'pry'
-require_relative 'article.rb'
-#useful_parts = page.css("span[id^='score']")[0].children.text
-
-
 class Hacker_news_scraper
 
   def initialize
@@ -22,15 +13,12 @@ class Hacker_news_scraper
 
   def make_articles(array)
     array.each do |x|
-     name = x.parent.parent.previous.children[-1].children.children[0].text
+     title = x.parent.parent.previous.children[-1].children.children[0].text
      url = x.parent.parent.previous.children[-1].children[0].attributes["href"].value
      parent_url = x.parent.parent.previous.children[-1].children.children[1].text
      votes = x.children.text[/\d+/].to_i
-     Article.new({:name => name, :url => url, :parent_url => parent_url, :votes => votes})
+     Article.new({:title => title, :url => url, :parent_url => parent_url, :votes => votes})
     end
   end
 
 end
-
-Hacker_news_scraper.new
-puts Article.all_articles
