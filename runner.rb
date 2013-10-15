@@ -7,5 +7,8 @@ require_relative 'hacker_news_scraper.rb'
 require_relative 'database.rb'
 
 
-Hacker_news_scraper.new
+3.times do Hacker_news_scraper.new
+end
+
 puts Article.all_articles
+binding.pry
