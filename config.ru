@@ -1,2 +1,3 @@
-require './app'
-run Hacker_News_Scraper_App 
+require './environment.rb'
+
+run app.rb

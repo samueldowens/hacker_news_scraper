@@ -1,5 +1,3 @@
-require_relative '../environment'
-
 class Hacker_news_scraper
 
   def initialize
@@ -9,7 +7,7 @@ class Hacker_news_scraper
 
   def get_high_scores(page)
     page.css("span[id^='score']").select do |x|
-      x.children.text[/\d+/].to_i >= 50
+      x.children.text[/\d+/].to_i >= 100
     end
   end
 

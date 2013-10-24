@@ -1,0 +1,12 @@
+#TODO
+#
+# Need to write tests for everything below
+# Need a Class/Method to choose the top 4 ranked articles out of the database
+# Need to reset the database every 24 hours
+# Need to run the scrape every hour (what persists when an app is online)
+# Need to figure out how to get this displayed onto index.erb file
+# Create html layout for bootstrap
+# Add necessary bootstrap folders/files to give CSS support to html layout
+# How do all the working pieces fit together?
+
+#maybe do the refresh with a button on the page and THEN figure out #the automated refreshing once that's done?
