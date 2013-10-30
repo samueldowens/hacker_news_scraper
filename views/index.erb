@@ -1,40 +1,14 @@
-<body>
+
   <h1> Hacker News Scraper </h1>
 
   <ol>
+    <% 4.times do |n| %>
     <li>
       <ul>
-        <li> Name of Article Here </li>
-        <li> URL of Article Here </li>
-        <li> Points of Article Here </li>
-        <li> Parent Site URL Here </li>
+        <li> <%= @topfour[n].title %> </li>
+        <li> <%= @topfour[n].url %> </li>
+        <li> <%= @topfour[n].points.to_i %> </li>
       </ul>
     </li>
-
-    <li>
-      <ul>
-        <li> Name of Article Here </li>
-        <li> URL of Article Here </li>
-        <li> Points of Article Here </li>
-        <li> Parent Site URL Here </li>
-      </ul>
-    </li>
-
-    <li>
-      <ul>
-        <li> Name of Article Here </li>
-        <li> URL of Article Here </li>
-        <li> Points of Article Here </li>
-        <li> Parent Site URL Here </li>
-      </ul>
-    </li>
-
-    <li>
-      <ul>
-        <li> Name of Article Here </li>
-        <li> URL of Article Here </li>
-        <li> Points of Article Here </li>
-        <li> Parent Site URL Here </li>
-      </ul>
-    </li>
+    <% end %>
   </ol>
