@@ -1,10 +1,11 @@
 source 'https://rubygems.org' 
+ruby "2.0.0"
 
 gem 'bundler'
 gem 'nokogiri' 
 gem 'rack'#, '~>1.1' 
 # gem 'rspec', :require => 'spec'
-gem 'sinatra'
+gem 'sinatra', '1.1.0'
 # gem 'timers'
 gem 'sequel'
 gem 'rest-client'
