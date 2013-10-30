@@ -1,4 +1,5 @@
 require_relative '../environment'
+
 class Hacker_news_scraper
 
   def initialize
@@ -41,4 +42,4 @@ class Hacker_news_scraper
 
 end
 
-# Hacker_news_scraper.new
+Hacker_news_scraper.new
